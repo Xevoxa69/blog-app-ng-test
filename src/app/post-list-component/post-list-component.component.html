@@ -1,0 +1,11 @@
+<!--<ul class="list-group">-->
+  <!--<li class="list-group-item"><app-post-list-item-component *ngFor="let post of posts"></app-post-list-item-component></li>-->
+<!--</ul>-->
+
+<ul class="list-group">
+  <li *ngFor="let post of posts"
+      [ngClass]="getColor(getLikes(post))"
+      class="list-group-item">
+    <app-post-list-item-component [post]="post"></app-post-list-item-component>
+  </li>
+</ul>

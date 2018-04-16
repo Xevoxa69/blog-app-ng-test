@@ -1,0 +1,57 @@
+<div class="Container">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <p class="h2" [ngStyle]="{color: getColor()}">{{post.title}}</p>
+      </div>
+      <div class="col-sm" style="text-align: right">
+      </div>
+      <div class="col-sm">
+        <p class="h2"
+           style="
+         color: grey;
+         font-size: large;
+         text-align: right;">Créé le {{ today | date: 'short' }}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <blockquote class="blockquote">
+      <p class="mb-0">{{ post.content }}</p>
+    </blockquote>
+  </div>
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm">
+        <p>Like : {{ post.loveIts }} </p>
+      </div>
+
+      <div class="col-sm"></div>
+      <div class="col-sm" style="text-align: right;">
+        <button type="button" class="btn btn-success"
+                (click)="action('like')"
+                style="margin-right: 10px;">Like
+        </button>
+        <button type="button"
+                class="btn btn-danger"
+                (click)="action('dislike')">Dislike
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!--<button type="button" class="btn btn-success"-->
+  <!--(click)="action('like')">Like-->
+  <!--</button>-->
+  <!--<button type="button"-->
+  <!--class="btn btn-danger"-->
+  <!--(click)="action('dislike')">Dislike-->
+  <!--</button>-->
+  <!--POUR AFFICHER L'objet-->
+  <!--<pre>{{post | json}}</pre>-->
+  <!--c'est ce code-->
+</div>
